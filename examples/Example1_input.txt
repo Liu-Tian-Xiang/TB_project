@@ -1,0 +1,165 @@
+####
+#Input file
+####
+USE_distributed=0
+USE_parallel_output=1
+USE_parallel_K_points=1
+######
+USE_parallel_in_preCalc=0
+USE_pzheevx_OR_Eigen_in_preCalc=0
+USE_pzheevx_in_blocks_diag=0
+USE_Eigen_in_blocks_diag =0
+####
+USE_blocks_transform=0
+USE_blocks_transform_bulk_states=0
+USE_transform_matrix=0
+####
+USE_LoMEType1=1
+USE_LoMEType2=0
+USE_LoMEType3=0
+USE_LoMC=0
+
+USE_extra_k_point=0
+%Kextra%0
+L | 0 | 5
+X | 0 | 5
+L | -4 | 4
+X | -4 | 4
+L | 5 | 8
+X | 5 | 8
+%
+dataVersion= 00-
+##############
+DividedFactor= 2
+bandbegin=0
+bandend=0
+LengthBegin=0
+LengthEnd=0
+
+BandOffSet=0.53
+scaleFactor=1
+
+up=10
+down=-4
+
+
+dis=0.1875 
+AtomNum=2 
+DataTag=0
+AutoMatic=0
+USE_FixedSize_or_EnergyRange=0
+USE_OneRange_or_MoreRanges=1
+USE_bulk_states_construction=0
+USE_direct_construction=0
+USE_RowTruncation=0
+USE_ColTruncation=0
+USE_decomposition=0
+USE_3Dpbc=1
+
+#index | material | block size | range ()
+%XSegments%1
+1  |GaAs| 1 | 4 | 10
+1  |AlAs| 100 | 4 | 10
+1  |AlAs| 200 | 4 | 15
+4  |GaAs| 2 | -400 | 10
+5  |GaAs| 2 | -400 | 10
+6  |GaAs| 1 | -400 | 10
+7  |GaAs| 1 | -400 | 10
+8  |GaAs| 1 | -400 | 10
+
+8  |AlAs| 1 | 1 | 1
+10 |GaAs| 1 | 1 | 1
+10 |GaAs| 1 | 1 | 1
+10 |GaAs| 1 | 1 | 1
+13 |GaAs| 1 | 1 | 1
+13 |GaAs| 1 | 1 | 1
+13 |GaAs| 1 | 1 | 1
+%           
+
+#label | {vector} | index
+%CellConstructedVector%0
+ x |  0.000 |  0.500 | 0.500 | 0 
+ y |  0.500 |  0.000 | 0.500 | 1 
+ z |  0.500 |  0.500 | 0.000 | 2 
+%
+
+USE_SOC=0
+%Orbital%10
+ s      | 0 | 0 | 0 | 1
+ py     | 0 | 1 | -1| 1
+ pz     | 0 | 1 | 0 | 1
+ px     | 0 | 1 | 1 | 1
+ s*     | 1 | 0 | 0 | 1
+ dxy    | 0 | 2 | -2| 1
+ dyz    | 0 | 2 | -1| 1
+ 3z2-r2 | 0 | 2 | 0 | 1
+ dzx    | 0 | 2 | 1 | 1
+ x2-y2  | 0 | 2 | 2 | 1
+ s      | 0 | 0 | 0 | -1 #######################
+ py     | 0 | 1 | -1| -1
+ pz     | 0 | 1 | 0 | -1
+ px     | 0 | 1 | 1 | -1
+ s*     | 1 | 0 | 0 | -1
+ dxy    | 0 | 2 | -2| -1
+ dyz    | 0 | 2 | -1| -1
+ 3z2-r2 | 0 | 2 | 0 | -1
+ dzx    | 0 | 2 | 1 | -1
+ x2-y2  | 0 | 2 | 2 | -1
+%
+
+
+#label  | n | l | m | s
+%Orbitalbak%20
+ s      | 0 | 0 | 0 | 1
+ s      | 0 | 0 | 0 | -1
+ px     | 0 | 1 | 1 | 1
+ px     | 0 | 1 | 1 | -1
+ py     | 0 | 1 | -1| 1
+ py     | 0 | 1 | -1| -1
+ pz     | 0 | 1 | 0 | 1
+ pz     | 0 | 1 | 0 | -1
+ dyz    | 0 | 2 | -1| 1
+ dyz    | 0 | 2 | -1| -1
+ dzx    | 0 | 2 | 1 | 1
+ dzx    | 0 | 2 | 1 | -1
+ dxy    | 0 | 2 | -2| 1
+ dxy    | 0 | 2 | -2| -1
+ x2-y2  | 0 | 2 | 2 | 1
+ x2-y2  | 0 | 2 | 2 | -1
+ 3z2-r2 | 0 | 2 | 0 | 1
+ 3z2-r2 | 0 | 2 | 0 | -1
+ s*     | 1 | 0 | 0 | 1
+ s*     | 1 | 0 | 0 | -1
+%
+
+#for 
+%cubicCellTranslatedVector%3
+ x |  1.000 |  0.000 | 0.000 | 0 
+ y |  0.000 |  1.000 | 0.000 | 1 
+ z |  0.000 |  0.000 | 1.000 | 2 
+%
+
+
+#for zigzag
+%CellTranslatedVector%3
+ x |  0.000 |  0.500 | 0.500 | 0 
+ y |  0.500 |  0.000 | 0.500 | 1 
+ z |  0.500 |  0.500 | 0.000 | 2 
+%
+
+#label | {vector} | index
+%Coordinates%2
+ c |  0.000 |  0.000 | 0.000 | 0 
+ a |  0.250 |  0.250 | 0.250 | 0 
+ c |  0.000 |  0.500 | 0.500 | 1 
+ a |  0.250 |  0.750 | 0.750 | 1 
+ c |  0.500 |  0.000 | 0.500 | 0 
+ a |  0.750 |  0.250 | 0.750 | 0 
+ c |  0.500 |  0.500 | 0.000 | 1 
+ a |  0.750 |  0.750 | 0.250 | 1 
+%
+
+kpnumber=200
+kppath= L->G->X->W->K->L->W->X'->K->G
+
+
