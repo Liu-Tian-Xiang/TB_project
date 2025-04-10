@@ -1,3 +1,4 @@
 # TB_project
 Project Goal: <br />
-Calculate the electron band structure of solid based on empirical tight binding method.
+
+Calculate the electron band structure of a solid using the empirical tight-binding method,with a preconditioner to improve computational performance.
